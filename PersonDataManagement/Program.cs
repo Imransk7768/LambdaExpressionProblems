@@ -13,7 +13,7 @@ namespace PersonDataManagement
             Console.WriteLine("1. Add Default Values\n2. GetTopRecords");
             while (end)
             {
-                Console.WriteLine("\nEnter Option For Exicute The Program");
+                Console.Write("\nChoose Option For Execute The Program\n");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -22,7 +22,7 @@ namespace PersonDataManagement
                         break;
                     case 2:
                         personManage.GetTopRecords();
-                        break;
+                        break;                   
                     default:
                         end = false;
                         Console.WriteLine("Program Ends.");
