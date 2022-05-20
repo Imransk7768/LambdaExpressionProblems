@@ -12,10 +12,10 @@ namespace PersonDataManagement
         public void AddDefaultData()
         {
             personList.Add(new Person { SSN = 1, Name = "Ameer", Address = "Ameerpet", Age = 20 });
-            personList.Add(new Person { SSN = 2, Name = "Balu", Address = "Balanagar", Age = 30 });
+            personList.Add(new Person { SSN = 2, Name = "Balu", Address = "Balanagar", Age = 15 });
             personList.Add(new Person { SSN = 3, Name = "Chandra", Address = "ChandaNagar", Age = 40 });
             personList.Add(new Person { SSN = 4, Name = "Deva", Address = " Dilsukhnagar", Age = 50 });
-            personList.Add(new Person { SSN = 5, Name = "Emanuel", Address = "Erragadda", Age = 60 });
+            personList.Add(new Person { SSN = 5, Name = "Emanuel", Address = "Erragadda", Age = 16 });
             personList.Add(new Person { SSN = 6, Name = "Farja", Address = "Falaknuma", Age = 12 });
             personList.Add(new Person { SSN = 7, Name = "Gaurav", Address = "Gandipet", Age = 65 });
             personList.Add(new Person { SSN = 8, Name = "Harish", Address = " Hitec City", Age = 70 });
@@ -38,6 +38,11 @@ namespace PersonDataManagement
             }
             Console.WriteLine("Get Top Records");
             var result = this.personList.Where(x => x.Age > 60);
+            Display(result);
+        }
+        public void GetRecords()
+        {
+            var result = this.personList.Where(x => x.Age > 13 && x.Age < 18);
             Display(result);
         }
     }
