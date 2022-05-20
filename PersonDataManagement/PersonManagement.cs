@@ -21,7 +21,7 @@ namespace PersonDataManagement
             personList.Add(new Person { SSN = 8, Name = "Harish", Address = " Hitec City", Age = 70 });
             personList.Add(new Person { SSN = 9, Name = "Inayat", Address = "Ibrahimpatnam", Age = 44 });
             personList.Add(new Person { SSN = 10, Name = "Jasmine", Address = "Jamia Osmania", Age = 30 });
-            //Display(personList);
+            Display(personList);
         }
         public void Display(IEnumerable<Person> list)
         {
@@ -32,6 +32,11 @@ namespace PersonDataManagement
         }
         public void GetTopRecords()
         {
+            if(personList.Count() ==0)
+            {
+                AddDefaultData();
+            }
+            Console.WriteLine("Get Top Records");
             var result = this.personList.Where(x => x.Age > 60);
             Display(result);
         }
