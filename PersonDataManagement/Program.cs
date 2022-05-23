@@ -41,6 +41,11 @@ namespace PersonDataManagement
                         personManage.CheckDataList();
                         personManage.SkipTheRecords();
                         break;
+                    case 7:
+                        personManage.CheckDataList();
+                        personManage.RemoveRecord();
+                        Console.WriteLine("Record Removed.");
+                        break;
                     default:
                         end = false;
                         Console.WriteLine("Program Ends.");

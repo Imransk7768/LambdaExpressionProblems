@@ -59,8 +59,8 @@ namespace PersonDataManagement
                 AddDefaultData();
             }
             Console.Write("\nAverage Age is : ");
-            var Result = this.personList.Average(x => x.Age);
-            Console.WriteLine(Result);
+            var result = this.personList.Average(x => x.Age);
+            Console.WriteLine(result);
         }
         public void GetValue()
         {
@@ -78,8 +78,14 @@ namespace PersonDataManagement
         public void SkipTheRecords()
         {
             Console.WriteLine("Data Skiped");
-            var Result = this.personList.Skip(this.personList.Where(x => x.Age < 65).Count());
-            Display(Result);
+            var result = this.personList.Skip(this.personList.Where(x => x.Age < 65).Count());
+            Display(result);
+        }
+        public void RemoveRecord()
+        {
+            Person result = this.personList.Find(x => x.Name == "Farja");
+            this.personList.Remove(result);
+            Display(this.personList);
         }
     }
 }
