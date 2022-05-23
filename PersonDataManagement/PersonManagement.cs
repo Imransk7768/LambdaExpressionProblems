@@ -23,6 +23,13 @@ namespace PersonDataManagement
             personList.Add(new Person { SSN = 10, Name = "Jasmine", Address = "Jamia Osmania", Age = 30 });
             Display(personList);
         }
+        public void CheckDataList()
+        {
+            if (personList.Count() == 0)
+            {
+                AddDefaultData();
+            }
+        }
         public void Display(IEnumerable<Person> list)
         {
             foreach (var person in list)
@@ -55,5 +62,19 @@ namespace PersonDataManagement
             var Result = this.personList.Average(x => x.Age);
             Console.WriteLine(Result);
         }
+        public void GetValue()
+        {
+            var result = this.personList.Where(x => x.Name == "Balu");
+            if (result != null)
+            {
+                Console.WriteLine("Person Name is Present in the List");
+            }
+            else
+            {
+                Console.WriteLine("Person Name is Present in the List");
+            }
+            Display(result);
+        }
+
     }
 }

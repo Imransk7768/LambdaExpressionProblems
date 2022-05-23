@@ -10,7 +10,7 @@ namespace PersonDataManagement
             PersonManagement personManage = new PersonManagement();
 
             bool end = true;
-            Console.WriteLine("1. Add Default Values\n2. GetTopRecords\n3. Get Records Btw Age 13-18\n4. Average Age.");
+            Console.WriteLine("1. Add Default Values\n2. GetTopRecords\n3. Get Records Btw Age 13-18\n4. Average Age\n5. Check Record Prasent or Not.");
             while (end)
             {
                 Console.Write("\nChoose Option For Execute The Program : ");
@@ -31,6 +31,10 @@ namespace PersonDataManagement
                     case 4:
                         //personManage.AddDefaultData();
                         personManage.AvarageAgeRecord();
+                        break;
+                    case 5:
+                        personManage.CheckDataList();
+                        personManage.GetValue();
                         break;
                     default:
                         end = false;
