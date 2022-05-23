@@ -10,7 +10,8 @@ namespace PersonDataManagement
             PersonManagement personManage = new PersonManagement();
 
             bool end = true;
-            Console.WriteLine("1. Add Default Values\n2. GetTopRecords\n3. Get Records Btw Age 13-18\n4. Average Age\n5. Check Record Prasent or Not.");
+            Console.WriteLine("1. Add Default Values\n2. GetTopRecords\n3. Get Records Btw Age 13-18\n4. Average Age\n5. Check Record Prasent or Not" +
+                "\n6. Skip the Data in List");
             while (end)
             {
                 Console.Write("\nChoose Option For Execute The Program : ");
@@ -35,6 +36,10 @@ namespace PersonDataManagement
                     case 5:
                         personManage.CheckDataList();
                         personManage.GetValue();
+                        break;
+                    case 6:
+                        personManage.CheckDataList();
+                        personManage.SkipTheRecords();
                         break;
                     default:
                         end = false;

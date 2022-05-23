@@ -39,7 +39,7 @@ namespace PersonDataManagement
         }
         public void GetTopRecords()
         {
-            if(personList.Count() ==0)
+            if (personList.Count() == 0)
             {
                 AddDefaultData();
             }
@@ -75,6 +75,11 @@ namespace PersonDataManagement
             }
             Display(result);
         }
-
+        public void SkipTheRecords()
+        {
+            Console.WriteLine("Data Skiped");
+            var Result = this.personList.Skip(this.personList.Where(x => x.Age < 65).Count());
+            Display(Result);
+        }
     }
 }
